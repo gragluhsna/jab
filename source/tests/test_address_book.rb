@@ -1,5 +1,5 @@
 require "test/unit"
-require "../main/address_book_app"
+require_relative "../main/address_book_app"
 
 class TestAddressBook < Test::Unit::TestCase
   def test_initialize_address_book
