@@ -12,6 +12,15 @@ class TestAddressBook < Test::Unit::TestCase
     address_book.add(Contact.new("Anshul", "83089624"))
     assert_equal(address_book.size,1)
   end
+  
+  def test_find_contact
+    address_book = AddressBook.new
+    address_book.add(Contact.new("Anshul", "83089624"))
+    address_book.add(Contact.new("Shweta", "81252251"))
+    result = address_book.find("Anshul")
+    assert_equal(result.phone, "83089624")
+  end
+  
 end
 
 class TestContact < Test::Unit::TestCase

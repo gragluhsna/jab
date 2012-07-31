@@ -13,6 +13,10 @@ class AddressBook
     @contacts << contact
   end
   
+  def find(input)
+    @contacts.each {|contact| return contact if contact.name == input }
+  end
+  
 end
 
 class Contact
